@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataTalk</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header><h1>DataTalk – talk with your data</h1></header>
+  <main>
+    <section class="input-box">
+      <label for="userPrompt">Ask a question about your data:</label>
+      <input type="text" id="userPrompt" placeholder="e.g., Show average revenue by region" />
+
+      <label for="dbSelect">Choose database:</label>
+      <select id="dbSelect">
+        {% for db in databases %}
+          <option value="{{ db }}">{{ db }}</option>
+        {% endfor %}
+      </select>
+
+      <button onclick="analyze()">Analyze</button>
+    </section>
+
+    <section id="results" class="results-box"></section>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

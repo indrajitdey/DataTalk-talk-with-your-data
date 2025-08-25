@@ -1,0 +1,200 @@
+[
+  {
+    "database": "api",
+    "tables": [
+      {
+        "name": "users",
+        "table_type": "BASE TABLE",
+        "columns": [
+          {
+            "column_name": "id",
+            "type": "int",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "name",
+            "type": "varchar(100)",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "username",
+            "type": "varchar(100)",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "email",
+            "type": "varchar(100)",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "address",
+            "type": "varchar(100)",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "phone",
+            "type": "varchar(100)",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "website",
+            "type": "varchar(100)",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "company",
+            "type": "varchar(100)",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          }
+        ]
+      }
+    ],
+    "views": []
+  },
+  {
+    "database": "campaignperformance",
+    "tables": [
+      {
+        "name": "campaigns",
+        "table_type": "BASE TABLE",
+        "columns": [
+          {
+            "column_name": "campaign_id",
+            "type": "int",
+            "nullable": false,
+            "key": "PRI",
+            "default": null,
+            "extra": "auto_increment"
+          },
+          {
+            "column_name": "name",
+            "type": "varchar(255)",
+            "nullable": false,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "start_date",
+            "type": "date",
+            "nullable": false,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "end_date",
+            "type": "date",
+            "nullable": false,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "budget",
+            "type": "decimal(12,2)",
+            "nullable": false,
+            "key": "",
+            "default": null,
+            "extra": ""
+          }
+        ]
+      },
+      {
+        "name": "performance_metrics",
+        "table_type": "BASE TABLE",
+        "columns": [
+          {
+            "column_name": "metric_id",
+            "type": "int",
+            "nullable": false,
+            "key": "PRI",
+            "default": null,
+            "extra": "auto_increment"
+          },
+          {
+            "column_name": "campaign_id",
+            "type": "int",
+            "nullable": false,
+            "key": "MUL",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "impressions",
+            "type": "int",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "clicks",
+            "type": "int",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "conversions",
+            "type": "int",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "cost",
+            "type": "decimal(12,2)",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "revenue",
+            "type": "decimal(12,2)",
+            "nullable": true,
+            "key": "",
+            "default": null,
+            "extra": ""
+          },
+          {
+            "column_name": "date",
+            "type": "date",
+            "nullable": false,
+            "key": "",
+            "default": null,
+            "extra": ""
+          }
+        ]
+      }
+    ],
+    "views": []
+  }
+]
